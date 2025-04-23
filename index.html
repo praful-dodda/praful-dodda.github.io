@@ -1,58 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <title> Praful Dodda </title>
-        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
-        <link href="css/frame.css" media="screen" rel="stylesheet" type="text/css" />
-        <link href="css/controls.css" media="screen" rel="stylesheet" type="text/css" />
-        <link href="css/custom.css" media="screen" rel="stylesheet" type="text/css" />
-        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-        <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
-        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="js/menu.js"></script>
-        <script>
-            (function (i, s, o, g, r, a, m) {
-                i['GoogleAnalyticsObject'] = r;
-                i[r] = i[r] || function () {
-                    (i[r].q = i[r].q || []).push(arguments)
-                }, i[r].l = 1 * new Date();
-                a = s.createElement(o),
-                    m = s.getElementsByTagName(o)[0];
-                a.async = 1;
-                a.src = g;
-                m.parentNode.insertBefore(a, m)
-                })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-                ga('create', 'UA-103598896-1', 'auto');
-                ga('send', 'pageview');
-            </script>
-    </head>
+<head>
+    <title>Praful Dodda</title>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/frame.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="css/controls.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="css/custom.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/menu.js"></script>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-103598896-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+</head>
 
-    <body>
-        <div class="menu-container" ></div>
-        <div class="content-container" >
-            <div class="content">
-                <div class="content-table flex-column">
-                    <img class="image" id="me" src="img/praful.jpeg">
-                </div>
-                <div class="flex-item flex-column">
-                    <h2> Praful Dodda</h2>
-                    <p class= "text">
-                        Ph.D. Candidate at UNC Chapel Hill <br>
-                        praful (at) unc.edu <br>
-
-                    </p>
-                </div>
-            </div>
+<body>
+    <div class="menu-container"></div>
+    
+    <!-- Colorful header art section similar to reference design -->
+    <div class="header-art"></div>
+    
+    <div class="content-container">
+        <div class="content">
+            <!-- Two-column layout similar to the reference -->
             <div class="flex-row">
-                <div class="flex-item flex-column">
-                    <h2> About Me </h2>
-                    <p class= "text">
-                        I am a Ph.D. candidate in the department of Environmental Sciences and Engineering, UNC Chapel Hill. 
-                        I work in air quality modeling and space-time mapping. I worked 
+                <!-- Left column with image and basic info -->
+                <div class="flex-column" style="max-width: 250px; margin-right: 30px;">
+                    <img class="image" src="img/praful.jpeg" alt="Praful Dodda" style="width: 100%; margin-bottom: 20px;">
+                    
+                    <h2>Praful Dodda</h2>
+                    <p>
+                        PhD Student in Environmental Sciences and Engineering<br>
+                        UNC Chapel Hill<br>
+                        praful (at) unc.edu
+                    </p>
+                    
+                    <p><a href="file/CV.pdf">Curriculum vitae</a></p>
+                    <p><a href="https://github.com/praful-dodda">GitHub</a></p>
+                </div>
+                
+                <!-- Right column with About section - positioned beside the image -->
+                <div class="flex-column" style="flex-grow: 1;">
+                    <h1>About</h1>
+                    
+                    <p class="text">
+                        I am a PhD Student in the department of Environmental Sciences and Engineering at UNC Chapel Hill. 
+                        My research focuses on air quality modeling and space-time mapping.
+                    </p>
+                    
+                    <h2>Research Interests</h2>
+                    <ul>
+                        <li>Air quality modeling</li>
+                        <li>Space-time mapping</li>
+                        <li>Environmental data analysis</li>
+                    </ul>
+                    
+                    <h2>Short Bio</h2>
+                    <p class="text">
+                        I specialize in developing advanced modeling techniques for air quality assessment and spatio-temporal 
+                        analysis of environmental data. My work aims to improve our understanding of air pollution patterns 
+                        and their impact on human health and the environment.
                     </p>
                 </div>
             </div>
         </div>
-    </body>
+    </div>
+</body>
+</html>
