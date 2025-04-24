@@ -6,6 +6,181 @@
   margin-top: 0;
 }
 
+/* Header art styling */
+.header-art {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.header-image {
+  width: 100%;
+  height: auto;
+  /* max-width: 100%; */
+  max-height: 500px;
+  object-fit: contain;
+}
+
+/* Profile section layout */
+.profile-section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 20px;
+}
+
+/* Profile image styling */
+.profile-image-container {
+  flex: 0 0 auto;
+  margin-right: 30px;
+  width: 180px; /* Match reference image size */
+}
+
+.profile-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-width: 180px;
+}
+
+/* Profile content styling */
+.profile-content {
+  flex: 1 1 60%;
+}
+
+.about-heading {
+  margin-top: 0;
+  font-size: 36px;
+}
+
+/* Personal info section styling */
+.info-section {
+  margin: 30px 20px 0;
+}
+
+.info-section h2 {
+  margin-top: 0;
+}
+
+/* Projects section styling */
+.projects-section {
+  margin: 40px 20px 20px;
+}
+
+.projects-section h1 {
+  margin-bottom: 25px;
+}
+
+.project-item {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 30px;
+}
+
+.project-item:last-child {
+  border-bottom: none;
+}
+
+.project-image-container {
+  flex: 0 0 250px;
+  margin-right: 25px;
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.project-content {
+  flex: 1;
+}
+
+.project-content h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+.project-links {
+  margin-top: 15px;
+}
+
+.project-links a {
+  color: #005cbf;
+  text-decoration: none;
+}
+
+.project-links a:hover {
+  text-decoration: underline;
+}
+
+/* Search functionality styling */
+.search-container {
+  margin-bottom: 30px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.search-box {
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.search-box:focus {
+  outline: none;
+  border-color: #005cbf;
+  box-shadow: 0 1px 3px rgba(0,92,191,0.3);
+}
+
+.no-results-message {
+  padding: 20px;
+  background-color: #f8f8f8;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-style: italic;
+  color: #666;
+}
+
+/* Responsive styling for smaller screens */
+@media screen and (max-width: 768px) {
+  .profile-section {
+    flex-direction: column;
+  }
+  
+  .profile-image-container {
+    margin-right: 0;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 180px;
+  }
+  
+  .about-heading {
+    margin-top: 20px;
+  }
+  
+  .project-item {
+    flex-direction: column;
+  }
+  
+  .project-image-container {
+    margin-right: 0;
+    margin-bottom: 20px;
+    max-width: 100%;
+  }
+}
+
 #me {
   width: 250px;
   border-radius: 50%;
@@ -17,6 +192,31 @@
 
 .max-width-600 {
   max-width: 900px;
+}
+
+/* Responsive design for the main flex layout */
+.flex-row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  gap: 30px;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Make sure the layout works on mobile devices */
+@media screen and (max-width: 768px) {
+  .flex-row {
+    flex-direction: column;
+  }
+  
+  .flex-column[style*="max-width: 250px"] {
+    max-width: 100% !important;
+    margin-right: 0 !important;
+  }
 }
 
 @media screen and (min-width: 900px) {

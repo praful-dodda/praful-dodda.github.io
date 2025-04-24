@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Projects - Praful Dodda</title>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/frame.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="css/controls.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="css/custom.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/menu.js"></script>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-103598896-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+    
+    <!-- Add search functionality script -->
+    <script>
+        $(document).ready(function() {
+            $("#search-input").on("keyup", function() {
+                var value = $(this).val().toLowerCase();
+                $(".project-item").filter(function() {
+                    var projectText = $(this).text().toLowerCase();
+                    var isVisible = projectText.indexOf(value) > -1;
+                    $(this).toggle(isVisible);
+                    return isVisible;
+                });
+                
+                // Display message if no projects match the search
+                if($(".project-item:visible").length === 0) {
+                    $("#no-results").show();
+                } else {
+                    $("#no-results").hide();
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="menu-container"></div>
+    
+    <!-- Commented out website header 
+    <div class="header-art">
+        <img src="img/website-header.png" alt="Website Header" class="header-image">
+    </div>
+    -->
+    
+    <div class="content-container">
+        <div class="content">
+            <!-- Projects section -->
+            <div class="projects-section">
+                <h1>Projects</h1>
+                
+                <!-- Add search box -->
+                <div class="search-container">
+                    <input type="text" id="search-input" class="search-box" placeholder="Search projects...">
+                </div>
+                
+                <!-- No results message -->
+                <div id="no-results" class="no-results-message" style="display: none;">
+                    <p>No projects match your search criteria.</p>
+                </div>
+                
+                <!-- Project 1 -->
+                <div class="project-item">
+                    <div class="project-image-container">
+                        <img src="img/projects/project1/senseable-shoes.jpg" alt="SBTEX Exposure Analysis" class="project-image">
+                    </div>
+                    <div class="project-content">
+                        <h2>Hazardous Air Pollutant Exposure Mapping in the US Gulf States</h2>
+                        <p class="text">
+                            This project applies the Bayesian Maximum Entropy (BME) data fusion framework to map SBTEX 
+                            (Styrene, Benzene, Toluene, Ethylbenzene, Xylenes) concentrations across the US Gulf States 
+                            from 2011-2016. By integrating ground monitoring data with bias-corrected CAMx model outputs 
+                            and Land Use Regression offsets, we create high-resolution exposure maps for these hazardous 
+                            air pollutants. Our analysis reveals long-term concentration trends and, critically, quantifies 
+                            exposure disparities across demographic groups using Population Weighted Exposure Ratios. 
+                            The results identify geographic areas with significant environmental justice concerns where 
+                            minority populations face disproportionate exposure to these harmful pollutants.
+                        </p>
+                        <p class="project-links">
+                            <a href="#">Publication</a> | 
+                            <a href="#">Data visualization</a> | 
+                            <a href="#">GitHub repository</a>
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-item">
+                    <div class="project-image-container">
+                        <img src="img/projects/project2/senseable-shoes.jpg" alt="1,3-Butadiene Risk Assessment" class="project-image">
+                    </div>
+                    <div class="project-content">
+                        <h2>Cancer Risk Assessment from 1,3-Butadiene Exposure</h2>
+                        <p class="text">
+                            This research extends our work to 1,3-butadiene, a potent carcinogen, in the US Gulf States 
+                            from 2011-2016. Using the BME framework with multiple data streams (ground observations, 
+                            emissions-informed Land Use Regression, and bias-corrected CAMx model outputs), we generate 
+                            high-resolution exposure estimates across the region. Beyond mapping spatial patterns and 
+                            temporal trends, this project conducts a comprehensive cancer risk assessment for leukemia 
+                            potentially attributable to ambient 1,3-butadiene exposure. Our analysis considers both general 
+                            population exposure and potentially higher exposure scenarios for outdoor workers and those 
+                            in proximity to industrial sources, providing crucial information for public health protection 
+                            and regulatory decision-making.
+                        </p>
+                        <p class="project-links">
+                            <a href="#">Publication</a> | 
+                            <a href="#">Risk assessment tool</a> | 
+                            <a href="#">Technical documentation</a>
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-item">
+                    <div class="project-image-container">
+                        <img src="img/projects/project3/senseable-shoes.jpg" alt="Global Ozone Mapping" class="project-image">
+                    </div>
+                    <div class="project-content">
+                        <h2>Global High-Resolution Ground-Level Ozone Mapping</h2>
+                        <p class="text">
+                            This ambitious project creates monthly global ground-level ozone concentration maps at 0.1°×0.1° 
+                            resolution for 2013-2022. Our methodology implements an advanced BME data fusion framework that 
+                            integrates diverse global datasets: ground observations from TOAR-II (hard data) with multiple 
+                            soft data streams including satellite measurements (IASI+GOME-2), multi-model CTM ensemble outputs 
+                            (M3-Fusion), and machine learning predictions. A key innovation is our application of spatially 
+                            heterogeneous bias correction (RAMP method) to the soft data prior to fusion. The resulting 
+                            validated 10-year global dataset provides unprecedented spatial and temporal coverage of ozone 
+                            concentrations, formatted specifically for health impact assessment (global disease burden) 
+                            and agricultural yield loss evaluation.
+                        </p>
+                        <p class="project-links">
+                            <a href="#">Publication</a> | 
+                            <a href="#">Interactive global map</a> | 
+                            <a href="#">Dataset access</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
