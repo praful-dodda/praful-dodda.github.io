@@ -27,26 +27,35 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin: 0 20px;
+  margin: 30px 20px 0;
+  align-items: flex-start; /* Align items to the top */
 }
 
 /* Profile image styling */
-.profile-image-container {
+.profile-left-column {
   flex: 0 0 auto;
   margin-right: 30px;
-  width: 180px; /* Match reference image size */
+  width: 180px;
+  max-width: 180px; /* Add explicit max-width */
+}
+
+.profile-image-container {
+  width: 180px;
+  margin-right: 50px; /* Increase spacing between image and About section */
+  margin-top: 10px;
+  overflow: hidden; /* Hide any overflow from the image */
 }
 
 .profile-image {
   width: 100%;
   height: auto;
   display: block;
-  max-width: 180px;
 }
 
 /* Profile content styling */
 .profile-content {
   flex: 1 1 60%;
+  min-width: 300px; /* Ensure content has enough room */
 }
 
 .about-heading {
@@ -87,11 +96,16 @@
 .project-image-container {
   flex: 0 0 250px;
   margin-right: 25px;
+  max-width: 250px; /* Ensure a maximum width */
+  overflow: hidden; /* Hide any overflow */
 }
 
 .project-image {
   width: 100%;
   height: auto;
+  display: block;
+  max-height: 200px; /* Limit height */
+  object-fit: cover; /* Maintain aspect ratio */
   border-radius: 4px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
